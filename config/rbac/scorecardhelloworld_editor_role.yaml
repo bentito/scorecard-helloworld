@@ -1,0 +1,24 @@
+# permissions for end users to edit scorecardhelloworlds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: scorecardhelloworld-editor-role
+rules:
+- apiGroups:
+  - scorecard.quay.io
+  resources:
+  - scorecardhelloworlds
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - scorecard.quay.io
+  resources:
+  - scorecardhelloworlds/status
+  verbs:
+  - get

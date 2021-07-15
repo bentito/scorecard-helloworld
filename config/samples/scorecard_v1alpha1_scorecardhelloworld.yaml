@@ -1,0 +1,7 @@
+apiVersion: scorecard.quay.io/v1alpha1
+kind: ScorecardHelloWorld
+metadata:
+  name: scorecardhelloworld-sample
+spec:
+  # Add fields here
+  foo: bar
